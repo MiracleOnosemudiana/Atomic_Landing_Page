@@ -17,7 +17,7 @@ const Hero = () => {
                     borderRadius='rounded'
                 />
             </div>
-            <img src={Aloe_vera} alt="aloe vera plant" className='absolute bottom-0 right-0 sm:w-[100%] opacity-70 md:opacity-100 z-[0]' />
+            <img src={Aloe_vera} alt="aloe vera plant" className='absolute bottom-0 right-0 sm:w-[100%] opacity-50 md:opacity-100 z-[0]' />
         </div>
     );
 }
