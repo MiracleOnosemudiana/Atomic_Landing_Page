@@ -51,8 +51,8 @@ const Navbar = () => {
                         />
                     </div>
                     <p className='px-[6px] rounded bg-[#188754] text-white text-extrabold md:hidden' onClick={handleToggle}>
-                        {toggle ? <i class="fa fa-close" aria-hidden="true"></i>
-                            : <i class="fa fa-bars" aria-hidden="true"></i>}
+                        {toggle ? <i className="fa fa-close" aria-hidden="true"></i>
+                            : <i className="fa fa-bars" aria-hidden="true"></i>}
                     </p>
                 </div>
 
