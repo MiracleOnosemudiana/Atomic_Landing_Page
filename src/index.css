@@ -14,3 +14,12 @@
 li {
   cursor: pointer;
 }
+
+.gradient-bg {
+  background-image: linear-gradient(120deg, rgb(0, 2, 69), rgb(65, 101, 122));
+}
+
+input {
+  outline: none;
+  padding: 0 5px;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Button';
 
-const Navbar = () => {
+const Navbar = ({ setSubmitted }) => {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
@@ -37,6 +37,7 @@ const Navbar = () => {
                 <div className='flex space-x-5 md:space-x-0 items-center'>
                     <div className='md:space-x-3 space-x-2'>
                         <Button
+                            setSubmitted={setSubmitted}
                             bgColor='bg-[#188754]'
                             textColor='text-white'
                             text='Login'
