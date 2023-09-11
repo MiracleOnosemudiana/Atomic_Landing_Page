@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Button';
 
-const Navbar = ({ setSubmitted }) => {
+const Navbar = ({ submitted, setSubmitted }) => {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
@@ -40,7 +40,7 @@ const Navbar = ({ setSubmitted }) => {
                             setSubmitted={setSubmitted}
                             bgColor='bg-[#188754]'
                             textColor='text-white'
-                            text='Login'
+                            text={submitted ? 'Login' : 'Log Out'}
                             borderRadius='rounded-full'
                         />
                         <Button

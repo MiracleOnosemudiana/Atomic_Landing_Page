@@ -12,7 +12,9 @@ function App() {
 
   return (
     <div className="">
-      <Home setSubmitted={setSubmitted} />
+      <Home
+        submitted={submitted}
+        setSubmitted={setSubmitted} />
       <About />
       {/* <SignUp /> */}
       {/* <LogIn /> */}
