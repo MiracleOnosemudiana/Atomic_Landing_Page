@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -6,12 +6,16 @@ import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
 import NewLogin from './components/NewLogin'
 
+export const SubmittedContext = createContext()
+
 function App() {
+
 
   const [submitted, setSubmitted] = useState(true)
 
+
   return (
-    <div className="">
+    <SubmittedContext.Provider value={{ submitted, setSubmitted }}>
       <Home
         submitted={submitted}
         setSubmitted={setSubmitted} />
@@ -24,7 +28,8 @@ function App() {
           setSubmitted={setSubmitted}
         />
       </div>}
-    </ div>
+
+    </SubmittedContext.Provider>
   )
 }
 

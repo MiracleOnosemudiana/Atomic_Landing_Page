@@ -18,10 +18,6 @@ const NewLogin = ({ submitted, setSubmitted }) => {
         }))
     }
 
-    console.log(0.6+0.2);
-    console.log(0.1+0.2);
-
-
     const emailRegex = /^([a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4})$/
     const emailValid = emailRegex.test(loginData.email)
 
