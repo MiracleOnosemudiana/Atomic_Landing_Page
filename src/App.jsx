@@ -16,13 +16,11 @@ function App() {
 
   return (
     <SubmittedContext.Provider value={{ submitted, setSubmitted }}>
-      <Home
-        submitted={submitted}
-        setSubmitted={setSubmitted} />
+      <Home />
       <About />
       {/* <SignUp /> */}
       {/* <LogIn /> */}
-      {submitted && <div className='fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center backdrop-blur w-100'>
+      {submitted && <div className='fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center backdrop-blur w-100 h-screen'>
         <NewLogin
           submitted={submitted}
           setSubmitted={setSubmitted}

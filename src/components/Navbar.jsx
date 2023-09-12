@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Button from './Button';
+import { SubmittedContext } from '../App';
 
-const Navbar = ({ submitted, setSubmitted }) => {
+const Navbar = () => {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
@@ -36,13 +37,18 @@ const Navbar = ({ submitted, setSubmitted }) => {
                 </div>
                 <div className='flex space-x-5 md:space-x-0 items-center'>
                     <div className='md:space-x-3 space-x-2'>
-                        <Button
-                            setSubmitted={setSubmitted}
-                            bgColor='bg-[#188754]'
-                            textColor='text-white'
-                            text={submitted ? 'Login' : 'Log Out'}
-                            borderRadius='rounded-full'
-                        />
+                        <SubmittedContext.Consumer>
+                            {({ submitted }) => {
+                                return <Button
+                                    bgColor='bg-[#188754]'
+                                    textColor='text-white'
+                                    text={submitted ? 'Login' : 'Log Out'}
+                                    borderRadius='rounded-full'
+                                />
+
+                            }}
+                        </SubmittedContext.Consumer>
+
                         <Button
                             bgColor='bg-white'
                             textColor='text-black'

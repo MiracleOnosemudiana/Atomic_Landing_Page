@@ -3,13 +3,11 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import CardSection from '../components/CardSection';
 
-const Home = ({ submitted, setSubmitted }) => {
+const Home = () => {
     return (
         <div>
             <div className='bg-[#EAE9E5] relative z-[0]'>
-                <Navbar
-                    submitted={submitted}
-                    setSubmitted={setSubmitted} />
+                <Navbar />
                 <Hero />
             </div>
             <CardSection />
